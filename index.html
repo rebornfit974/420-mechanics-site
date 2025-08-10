@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO -->
+    <title>420 Mechanics – L'Atelier des Techniques de Culture Cannabis Avancées</title>
+    <meta name="description" content="Apprends à maîtriser le topping, FIM, LST, defol et autres secrets de growers pros. Outils, calendriers et guides pour booster tes récoltes.">
+    <meta name="keywords" content="culture cannabis, topping, FIM, LST, SCROG, defoliation, techniques apex, grower, 420">
+    <link rel="canonical" href="https://www.420mechanics.fr/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="420 Mechanics – L'atelier du grower moderne">
+    <meta property="og:description" content="Optimise ta culture, maîtrise chaque apex et booste tes récoltes comme un vrai mécano du 420.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.420mechanics.fr/">
+    <meta property="og:image" content="https://www.420mechanics.fr/assets/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="420 Mechanics – L'atelier du grower moderne">
+    <meta name="twitter:description" content="Techniques apex, calendriers et guides pour growers pros">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "420 Mechanics",
+        "url": "https://www.420mechanics.fr/",
+        "logo": "https://www.420mechanics.fr/assets/logo.png",
+        "description": "L'atelier du grower moderne - Techniques de culture cannabis avancées",
+        "sameAs": ["https://twitter.com/420Mechanics"]
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Charte 420 Mechanics */
+            --noir-garage: #0F1724;
+            --cuivre-mecanique: #B85C00;
+            --vert-signature: #2FA874;
+            --papier: #F6F6F6;
+            --gris-outil: #9CA3AF;
+            --blanc: #FFFFFF;
+            
+            /* Typographies */
+            --font-impact: 'Anton', sans-serif;
+            --font-text: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-xxl: 4rem;
+            
+            /* Border radius */
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-text);
+            background: var(--noir-garage);
+            color: var(--papier);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        /* Navigation */
+        nav {
+            background: rgba(15, 23, 36, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid var(--cuivre-mecanique);
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--spacing-sm) var(--spacing-md);
+        }
+        
+        .brand {
+            font-family: var(--font-impact);
+            font-size: 1.8rem;
+            color: var(--vert-signature);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+        
+        .nav-link {
+            color: var(--papier);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background: var(--cuivre-mecanique);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 var(--spacing-xxl);
+            text-align: center;
+            background: linear-gradient(135deg, var(--noir-garage) 0%, #1a2332 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23B85C00" opacity="0.1"/></svg>') repeat;
+            background-size: 50px 50px;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-family: var(--font-impact);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--vert-signature);
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--gris-outil);
+            margin-bottom: var(--spacing-lg);
+            font-style: italic;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto var(--spacing-xl);
+            line-height: 1.7;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--cuivre-mecanique);
+            color: var(--blanc);
+            padding: var(--spacing-md) var(--spacing-xl);
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(184, 92, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #d66d00;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(184, 92, 0, 0.4);
+        }
+        
+        /* Sections */
+        section {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .section-title {
+            font-family: var(--font-impact);
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--vert-signature);
+            margin-bottom: var(--spacing-xl);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--gris-outil);
+            margin-bottom: var(--spacing-xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .card {
+            background: linear-gradient(145deg, #1a2332, #0f1724);
+            border-radius: var(--radius-lg);
+            padding: 0;
+            border: 1px solid rgba(184, 92, 0, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cuivre-mecanique), transparent);
+            transition: left 0.5s ease;
+            z-index: 2;
+        }
+        
+        .card:hover::before {
+            left: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(47, 168, 116, 0.1);
+            border-color: var(--vert-signature);
+        }
+        
+        .card-image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            background: linear-gradient(135deg, var(--noir-garage), #1a2332);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover .card-image {
+            transform: scale(1.05);
+        }
+        
+        .card-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            background: rgba(15, 23, 36, 0.9);
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--cuivre-mecanique);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--blanc);
+            z-index: 3;
+        }
+        
+        .card-content {
+            padding: var(--spacing-lg);
+        }
+        
+        .card h3 {
+            font-family: var(--font-impact);
+            font-size: 1.5rem;
+            color: var(--vert-signature);
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+            padding: 0 var(--spacing-lg);
+            margin-top: var(--spacing-md);
+        }
+        
+        .card p {
+            color: var(--gris-outil);
+            margin-bottom: var(--spacing-sm);
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .card .technique-badge {
+            margin: var(--spacing-md) var(--spacing-lg) var(--spacing-sm) var(--spacing-lg);
+        }
+        
+        .card-link {
+            color: var(--cuivre-mecanique);
+            text-decoration: none;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .card-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Image placeholder/loading state */
+        .card-image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, var(--noir-garage) 25%, #1a2332 50%, var(--noir-garage) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            z-index: 1;
+        }
+        
+        .card-image {
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Planning Section */
+        .planning-container {
+            background: linear-gradient(135deg, #1a2332, #0f1724);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            border: 2px solid var(--cuivre-mecanique);
+        }
+        
+        .timeline {
+            position: relative;
+            padding: var(--spacing-lg) 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--vert-signature);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-xl);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            background: var(--noir-garage);
+            border: 1px solid var(--cuivre-mecanique);
+            border-radius: var(--radius);
+            padding: var(--spacing-md);
+            width: 45%;
+            position: relative;
+        }
+        
+        .timeline-marker {
+            width: 20px;
+            height: 20px;
+            background: var(--cuivre-mecanique);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        
+        .week-title {
+            font-family: var(--font-impact);
+            color: var(--vert-signature);
+            margin-bottom: var(--spacing-xs);
+            text-transform: uppercase;
+        }
+        
+        .week-tasks {
+            list-style: none;
+        }
+        
+        .week-tasks li {
+            color: var(--gris-outil);
+            margin-bottom: var(--spacing-xs);
+            padding-left: 1rem;
+            position: relative;
+        }
+        
+        .week-tasks li::before {
+            content: '🔧';
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--noir-garage);
+            border-top: 2px solid var(--cuivre-mecanique);
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .footer-section h4 {
+            font-family: var(--font-impact);
+            color: var(--vert-signature);
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .footer-links a {
+            color: var(--gris-outil);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--cuivre-mecanique);
+        }
+        
+        .legal-notice {
+            background: rgba(184, 92, 0, 0.1);
+            border: 1px solid var(--cuivre-mecanique);
+            border-radius: var(--radius);
+            padding: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+            font-size: 0.9rem;
+            color: var(--gris-outil);
+        }
+        
+        .copyright {
+            color: var(--gris-outil);
+            font-size: 0.9rem;
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid rgba(156, 163, 175, 0.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start;
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-marker {
+                left: 30px;
+                transform: none;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Contact Section Styles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            margin-top: var(--spacing-xl);
+        }
+        
+        .contact-form-container {
+            background: linear-gradient(145deg, #1a2332, var(--noir-garage));
+            border: 2px solid var(--cuivre-mecanique);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+        }
+        
+        .contact-form-header h3 {
+            font-family: var(--font-impact);
+            color: var(--vert-signature);
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+        }
+        
+        .contact-form-header p {
+            color: var(--gris-outil);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--vert-signature);
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            font-size: 0.9rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: var(--noir-garage);
+            border: 2px solid var(--gris-outil);
+            border-radius: var(--radius);
+            padding: var(--spacing-sm);
+            color: var(--papier);
+            font-family: var(--font-text);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--cuivre-mecanique);
+            box-shadow: 0 0 0 3px rgba(184, 92, 0, 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+            cursor: pointer;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+        
+        .submit-button {
+            width: 100%;
+            background: var(--cuivre-mecanique);
+            color: var(--blanc);
+            border: none;
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            font-family: var(--font-text);
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .submit-button:hover {
+            background: #d66d00;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184, 92, 0, 0.4);
+        }
+        
+        .submit-button:disabled {
+            background: var(--gris-outil);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Contact Info Cards */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+        
+        .contact-card {
+            background: linear-gradient(145deg, #1a2332, var(--noir-garage));
+            border: 1px solid var(--cuivre-mecanique);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            border-color: var(--vert-signature);
+            transform: translateY(-2px);
+        }
+        
+        .contact-card h4 {
+            font-family: var(--font-impact);
+            color: var(--vert-signature);
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+        }
+        
+        .contact-email {
+            font-family: var(--font-mono);
+            color: var(--cuivre-mecanique);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            word-break: break-all;
+        }
+        
+        .contact-detail {
+            color: var(--gris-outil);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--papier);
+            text-decoration: none;
+            padding: var(--spacing-xs);
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: rgba(47, 168, 116, 0.1);
+            color: var(--vert-signature);
+            transform: translateX(5px);
+        }
+        
+        .social-link span {
+            font-size: 1.2rem;
+        }
+        
+        .availability p {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-xs);
+            color: var(--papier);
+        }
+        
+        /* FAQ Preview */
+        .faq-preview {
+            background: linear-gradient(145deg, var(--noir-garage), #1a2332);
+        }
+        
+        .faq-items {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+        
+        .faq-item {
+            border: 1px solid rgba(156, 163, 175, 0.2);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        
+        .faq-item summary {
+            padding: var(--spacing-sm);
+            background: rgba(47, 168, 116, 0.1);
+            cursor: pointer;
+            color: var(--vert-signature);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+        
+        .faq-item summary:hover {
+            background: rgba(47, 168, 116, 0.2);
+        }
+        
+        .faq-item p {
+            padding: var(--spacing-sm);
+            color: var(--gris-outil);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin: 0;
+        }
+        
+        /* Confirmation Message */
+        .confirmation-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .confirmation-content {
+            background: var(--noir-garage);
+            border: 2px solid var(--vert-signature);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .confirmation-content h3 {
+            font-family: var(--font-impact);
+            color: var(--vert-signature);
+            margin-bottom: var(--spacing-md);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+        
+        .confirmation-content p {
+            color: var(--gris-outil);
+            margin-bottom: var(--spacing-md);
+            line-height: 1.6;
+        }
+        
+        .confirmation-close {
+            background: var(--cuivre-mecanique);
+            color: var(--blanc);
+            border: none;
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .confirmation-close:hover {
+            background: #d66d00;
+        }
+        
+        /* Responsive Contact */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+            }
+            
+            .contact-form-container {
+                order: 2;
+            }
+            
+            .contact-info {
+                order: 1;
+            }
+            
+            .social-links {
+                gap: var(--spacing-xs);
+            }
+            
+            .availability p {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-card {
+                padding: var(--spacing-md);
+            }
+            
+            .contact-email {
+                font-size: 1rem;
+            }
+            
+            .faq-item summary {
+                font-size: 0.85rem;
+            }
+        }
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--cuivre-mecanique);
+            color: var(--blanc);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background: #d66d00;
+            transform: translateY(-3px);
+        }
+        
+        /* Loading animation pour les images */
+        .loading-placeholder {
+            background: linear-gradient(90deg, var(--noir-garage) 25%, #1a2332 50%, var(--noir-garage) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Technique cards specific styles */
+        .technique-badge {
+            display: inline-block;
+            background: var(--vert-signature);
+            color: var(--noir-garage);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .difficulty-easy { background: #10b981; }
+        .difficulty-medium { background: #f59e0b; }
+        .difficulty-hard { background: #ef4444; }
+        
+        /* Modal styles pour les détails des techniques */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--noir-garage);
+            border: 2px solid var(--cuivre-mecanique);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-xl);
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--cuivre-mecanique);
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        
+        .modal h2 {
+            font-family: var(--font-impact);
+            color: var(--vert-signature);
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="brand">420 Mechanics</a>
+                <ul class="nav-menu">
+                    <li><a href="#accueil" class="nav-link">🔧 Atelier</a></li>
+                    <li><a href="#guides" class="nav-link">📘 Techniques</a></li>
+                    <li><a href="#planning" class="nav-link">📅 Planning</a></li>
+                    <li><a href="#journal" class="nav-link">🧠 Journal</a></li>
+                    <li><a href="#contact" class="nav-link">✉️ Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>420 Mechanics – L'atelier du grower moderne</h1>
+                <p class="hero-subtitle">Optimise ta culture, maîtrise chaque apex et booste tes récoltes comme un vrai mécano du 420.</p>
+                <p class="hero-description">
+                    Bienvenue chez 420 Mechanics. Ici, on démonte, on ajuste, on optimise. Pas de blabla, que des techniques concrètes pour transformer chaque apex en production optimale. Indoor, outdoor, hydro ou coco, on t'équipe avec les vraies méthodes et un planning clair pour construire ta légende verte. 🌱🔧
+                </p>
+                <a href="#guides" class="cta-button">Découvre les techniques</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Section -->
+    <section id="guides" class="section">
+        <div class="container">
+            <h2 class="section-title">Techniques Apex – La mécanique de la plante</h2>
+            <p class="section-subtitle">
+                Maîtrise chaque technique pour maximiser ton rendement et optimiser ta canopée comme un pro.
+            </p>
+            
+    <!-- Guides Section -->
+    <section id="guides" class="section">
+        <div class="container">
+            <h2 class="section-title">Techniques Apex – La mécanique de la plante</h2>
+            <p class="section-subtitle">
+                Maîtrise chaque technique pour maximiser ton rendement et optimiser ta canopée comme un pro.
+            </p>
+            
+            <div class="cards-grid">
+                <!-- Topping Card -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="assets/images/techniques/topping-before-after.jpg" 
+                             alt="Technique topping cannabis - avant et après coupe apex principal"
+                             class="card-image"
+                             loading="lazy"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzFhMjMzMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjMkZBODc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+4pyC77iPIFRvcHBpbmc8L3RleHQ+PC9zdmc+'">
+                    </div>
+                    <div class="card-icon">✂️</div>
+                    <span class="technique-badge difficulty-easy">Facile</span>
+                    <h3>Topping</h3>
+                    <p><strong>Objectif :</strong> Doubler les apex pour une canopée plus large</p>
+                    <p><strong>Moment optimal :</strong> 3-5 nœuds en croissance vigoureuse</p>
+                    <p><strong>Avantages :</strong> Plus de têtes principales, meilleur contrôle de hauteur</p>
+                    <p><strong>Risques :</strong> Stress temporaire, ralentissement 3-7 jours</p>
+                    <a href="#" class="card-link" data-technique="topping">En savoir plus →</a>
+                </div>
+
+                <!-- FIM Card -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="assets/images/techniques/fim-technique-result.jpg" 
+                             alt="Technique FIM cannabis - résultat 4 apex multiples"
+                             class="card-image"
+                             loading="lazy"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzFhMjMzMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjMkZBODc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+8J+MvyBGSU08L3RleHQ+PC9zdmc+'">
+                    </div>
+                    <div class="card-icon">🌿</div>
+                    <span class="technique-badge difficulty-medium">Intermédiaire</span>
+                    <h3>FIM (F*ck I Missed)</h3>
+                    <p><strong>Objectif :</strong> Créer 4+ apex sans couper complètement</p>
+                    <p><strong>Moment optimal :</strong> Juste avant le stretch de préfloraison</p>
+                    <p><strong>Avantages :</strong> Moins de stress que le topping, plus d'apex</p>
+                    <p><strong>Risques :</strong> Résultat parfois imprévisible</p>
+                    <a href="#" class="card-link" data-technique="fim">En savoir plus →</a>
+                </div>
+
+                <!-- LST Card -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="assets/images/techniques/lst-training-canopy.jpg" 
+                             alt="LST Low Stress Training cannabis - palissage horizontal canopée"
+                             class="card-image"
+                             loading="lazy"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzFhMjMzMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjMkZBODc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+8J+Ul0xTVDwvdGV4dD48L3N2Zz4='">
+                    </div>
+                    <div class="card-icon">🔗</div>
+                    <span class="technique-badge difficulty-easy">Facile</span>
+                    <h3>LST (Low Stress Training)</h3>
+                    <p><strong>Objectif :</strong> Plier et attacher pour égaliser la canopée</p>
+                    <p><strong>Moment optimal :</strong> Dès 2e semaine, branches encore flexibles</p>
+                    <p><strong>Avantages :</strong> Très peu de stress, résultats progressifs</p>
+                    <p><strong>Risques :</strong> Branches cassées si trop brutal</p>
+                    <a href="#" class="card-link" data-technique="lst">En savoir plus →</a>
+                </div>
+
+                <!-- SCROG Card -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="assets/images/techniques/scrog-screen-of-green.jpg" 
+                             alt="SCROG Screen of Green cannabis - filet tissage canopée optimale"
+                             class="card-image"
+                             loading="lazy"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzFhMjMzMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjMkZBODc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+8J+VuO+4jyBTQ1JPRzwvdGV4dD48L3N2Zz4='">
+                    </div>
+                    <div class="card-icon">🕸️</div>
+                    <span class="technique-badge difficulty-hard">Avancé</span>
+                    <h3>SCROG (Screen of Green)</h3>
+                    <p><strong>Objectif :</strong> Tisser la canopée dans un filet pour optimiser la lumière</p>
+                    <p><strong>Moment optimal :</strong> Avant stretch, maintenir en continu</p>
+                    <p><strong>Avantages :</strong> Rendement maximum, canopée parfaitement plane</p>
+                    <p><strong>Risques :</strong> Technique chronophage, accès difficile</p>
+                    <a href="#" class="card-link" data-technique="scrog">En savoir plus →</a>
+                </div>
+
+                <!-- Supercropping Card -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="assets/images/techniques/supercropping-stem-bending.jpg" 
+                             alt="Supercropping cannabis - technique micro-lésion renforcement tiges"
+                             class="card-image"
+                             loading="lazy"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzFhMjMzMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjMkZBODc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+8J+SqSBTdXBlcmNyb3A8L3RleHQ+PC9zdmc+'">
+                    </div>
+                    <div class="card-icon">💪</div>
+                    <span class="technique-badge difficulty-hard">Avancé</span>
+                    <h3>Supercropping</h3>
+                    <p><strong>Objectif :</strong> Micro-lésions pour booster les hormones de défense</p>
+                    <p><strong>Moment optimal :</strong> Stretch de préfloraison, branches semi-rigides</p>
+                    <p><strong>Avantages :</strong> Renforcement des tiges, augmentation potentielle THC</p>
+                    <p><strong>Risques :</strong> Cassure complète si mal exécuté</p>
+                    <a href="#" class="card-link" data-technique="supercropping">En savoir plus →</a>
+                </div>
+
+                <!-- Defoliation Card -->
+                <div class="card">
+                    <div class="card-image-container">
+                        <img src="assets/images/techniques/defoliation-before-after.jpg" 
+                             alt="Defoliation cannabis - avant après retrait feuillage pénétration lumière"
+                             class="card-image"
+                             loading="lazy"
+                             onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzFhMjMzMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjMkZBODc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+8J+NoyBEZWZvbDwvdGV4dD48L3N2Zz4='">
+                    </div>
+                    <div class="card-icon">🍃</div>
+                    <span class="technique-badge difficulty-medium">Intermédiaire</span>
+                    <h3>Defoliation</h3>
+                    <p><strong>Objectif :</strong> Retirer du feuillage pour améliorer pénétration lumineuse</p>
+                    <p><strong>Moment optimal :</strong> Milieu croissance + début floraison</p>
+                    <p><strong>Avantages :</strong> Meilleure circulation air, focus sur têtes</p>
+                    <p><strong>Risques :</strong> Stress important, ralentissement possible</p>
+                    <a href="#" class="card-link" data-technique="defoliation">En savoir plus →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+        </div>
+    </section>
+
+    <!-- Planning Section -->
+    <section id="planning" class="section">
+        <div class="container">
+            <h2 class="section-title">Calendrier Culture – Organisation Pro</h2>
+            <p class="section-subtitle">
+                Timeline semaine par semaine avec rappels techniques et check-lists imprimables
+            </p>
+            
+            <div class="planning-container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4 class="week-title">Semaines 7-8 : Préparation Floraison</h4>
+                            <ul class="week-tasks">
+                                <li>🔧 Dernier LST avant stretch</li>
+                                <li>🔧 SUPERCROPPING sur branches fortes</li>
+                                <li>Passage 12/12 si photopériodique</li>
+                                <li>Augmentation P-K dans nutrition</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4 class="week-title">Semaines 9-10 : Stretch Floraison</h4>
+                            <ul class="week-tasks">
+                                <li>🔧 Maintien SCROG - tisser nouvelles pousses</li>
+                                <li>Surveillance stretch (peut doubler de taille)</li>
+                                <li>Defoliation modérée si canopée dense</li>
+                                <li>Identification préfleurs mâles/femelles</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4 class="week-title">Semaines 11+ : Floraison Mature</h4>
+                            <ul class="week-tasks">
+                                <li>🔧 STOP toute technique apex stressante</li>
+                                <li>Focus support têtes lourdes</li>
+                                <li>Defoliation sélective grandes feuilles</li>
+                                <li>Surveillance trichomes pour récolte</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button class="cta-button" onclick="printPlanning()">📋 Imprimer Check-List</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journal Section -->
+    <section id="journal" class="section">
+        <div class="container">
+            <h2 class="section-title">Journal 420 – Expériences & Résultats</h2>
+            <p class="section-subtitle">
+                Études de cas réelles, comparatifs techniques et carnets de croissance documentés
+            </p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Test Comparatif : Topping vs FIM</h3>
+                    <p>Même génétique, conditions identiques, 2 techniques différentes.</p>
+                    <p><strong>Résultat :</strong> FIM +15% apex, Topping +22% poids final</p>
+                    <a href="#" class="card-link">Voir l'étude complète →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">📸</div>
+                    <h3>Carnet LST + SCROG</h3>
+                    <p>8 semaines de LST suivi d'un SCROG en 5x5. Documentation photo complète.</p>
+                    <p><strong>Rendement :</strong> 450g/m² en 600W HPS</p>
+                    <a href="#" class="card-link">Photos avant/après →</a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-icon">⚗️</div>
+                    <h3>Supercropping : Timing Critique</h3>
+                    <p>Test sur 12 plants - 4 timings différents de supercropping</p>
+                    <p><strong>Conclusion :</strong> Semaine 2 stretch = résultats optimaux</p>
+                    <a href="#" class="card-link">Données complètes →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact – Partage ton XP</h2>
+            <p class="section-subtitle">
+                Une question technique ? Des résultats à partager ? L'atelier 420 Mechanics est ouvert ! 🔧
+            </p>
+            
+            <div class="contact-grid">
+                <!-- Formulaire de contact -->
+                <div class="contact-form-container">
+                    <div class="contact-form-header">
+                        <h3>💬 Envoie ton message</h3>
+                        <p>Technique, retour d'expérience, photos de tes résultats... Tout est bon à prendre !</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom / Pseudo *</label>
+                            <input type="text" id="name" name="name" required placeholder="Ton pseudo grower...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="ton.email@exemple.fr">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject">
+                                <option value="question">❓ Question technique</option>
+                                <option value="experience">📸 Partage d'expérience</option>
+                                <option value="probleme">🔧 Problème avec une technique</option>
+                                <option value="suggestion">💡 Suggestion d'amélioration</option>
+                                <option value="collaboration">🤝 Proposition de collaboration</option>
+                                <option value="autre">💬 Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="technique">Technique concernée (optionnel)</label>
+                            <select id="technique" name="technique">
+                                <option value="">-- Sélectionne une technique --</option>
+                                <option value="topping">✂️ Topping</option>
+                                <option value="fim">🌿 FIM</option>
+                                <option value="lst">🔗 LST</option>
+                                <option value="scrog">🕸️ SCROG</option>
+                                <option value="supercropping">💪 Supercropping</option>
+                                <option value="defoliation">🍃 Defoliation</option>
+                                <option value="general">🌱 Général</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience">Ton niveau d'expérience</label>
+                            <select id="experience" name="experience">
+                                <option value="debutant">🌱 Débutant (premiers cycles)</option>
+                                <option value="intermediaire">🔧 Intermédiaire (quelques années)</option>
+                                <option value="avance">💪 Avancé (expert techniques)</option>
+                                <option value="pro">🏆 Pro (commercial/recherche)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Ton message *</label>
+                            <textarea id="message" name="message" required rows="6" placeholder="Détaille ta question, ton expérience, tes résultats... Plus c'est précis, mieux on peut t'aider ! 
+
+Exemples utiles :
+- Photos avant/après tes techniques
+- Problèmes rencontrés et solutions trouvées  
+- Variétés testées et réactions observées
+- Conditions de culture (indoor/outdoor, éclairage, substrat...)"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                📬 Je veux recevoir les updates techniques et nouveaux guides (max 1 email/mois)
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="legal" name="legal" required>
+                                <span class="checkmark"></span>
+                                ⚖️ J'accepte que mes données soient utilisées pour répondre à ma demande et je confirme respecter la législation locale *
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">
+                            <span class="button-text">🚀 Envoyer le message</span>
+                            <span class="button-loader" style="display: none;">📡 Envoi en cours...</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Infos contact -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h4>📧 Email Direct</h4>
+                        <p class="contact-email">contact@420mechanics.fr</p>
+                        <p class="contact-detail">Réponse garantie sous 24-48h<br>Toutes questions techniques bienvenues</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>💬 Réseaux Sociaux</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <span>📘</span> Facebook - 420 Mechanics
+                            </a>
+                            <a href="#" class="social-link">
+                                <span>📸</span> Instagram - @420mechanics
+                            </a>
+                            <a href="#" class="social-link">
+                                <span>🐦</span> Twitter - @420Mechanics
+                            </a>
+                            <a href="#" class="social-link">
+                                <span>💬</span> Discord - Communauté Techniques
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>📍 Localisation</h4>
+                        <p>🇫🇷 France Métropolitaine</p>
+                        <p class="contact-detail">
+                            Expert techniques de culture<br>
+                            Conseil et formation grower<br>
+                            Recherche & développement
+                        </p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>⏰ Disponibilité</h4>
+                        <div class="availability">
+                            <p><strong>Lun-Ven :</strong> 9h-18h</p>
+                            <p><strong>Sam :</strong> 10h-16h</p>
+                            <p><strong>Dim :</strong> Urgences uniquement</p>
+                        </div>
+                        <p class="contact-detail">
+                            Temps de réponse moyen : <strong>6 heures</strong><br>
+                            Urgences techniques : <strong>2 heures</strong>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-card faq-preview">
+                        <h4>❓ Questions Fréquentes</h4>
+                        <div class="faq-items">
+                            <details class="faq-item">
+                                <summary>🔧 "Quel est le meilleur moment pour topper ?"</summary>
+                                <p>Entre 3-5 nœuds bien développés, en croissance végétative vigoureuse. Jamais sur plant stressé !</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>📸 "Comment envoyer mes photos ?"</summary>
+                                <p>Via email avec photos en pièce jointe (max 10MB) ou liens vers cloud (Google Drive, Dropbox...).</p>
+                            </details>
+                            <details class="faq-item">
+                                <summary>🌱 "Vous donnez des conseils pour débutants ?"</summary>
+                                <p>Absolument ! Chaque technique a son niveau. On commence par LST et topping avant les techniques avancées.</p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Message confirmation -->
+            <div id="confirmationMessage" class="confirmation-message" style="display: none;">
+                <div class="confirmation-content">
+                    <h3>✅ Message envoyé avec succès !</h3>
+                    <p>Merci pour ton message ! L'équipe 420 Mechanics va te répondre sous 24-48h.</p>
+                    <p>En attendant, n'hésite pas à consulter nos guides et calendriers techniques ! 🔧</p>
+                    <button onclick="hideConfirmation()" class="confirmation-close">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Techniques Apex</h4>
+                    <ul class="footer-links">
+                        <li><a href="#topping">Topping Guide</a></li>
+                        <li><a href="#fim">FIM Technique</a></li>
+                        <li><a href="#lst">LST Training</a></li>
+                        <li><a href="#scrog">SCROG Setup</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Outils & Planning</h4>
+                    <ul class="footer-links">
+                        <li><a href="#planning">Calendrier Culture</a></li>
+                        <li><a href="#checklist">Check-Lists</a></li>
+                        <li><a href="#calculator">Calculateurs</a></li>
+                        <li><a href="#timeline">Timeline Technique</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Communauté</h4>
+                    <ul class="footer-links">
+                        <li><a href="#journal">Journal 420</a></li>
+                        <li><a href="#gallery">Galerie Photos</a></li>
+                        <li><a href="#testimonials">Témoignages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="legal-notice">
+                <strong>⚠️ Rappel Légal & Conformité</strong><br>
+                420 Mechanics propose des analyses techniques et de la documentation éducative. 
+                Consulte la législation locale avant toute expérimentation. Nous ne publions pas d'instructions 
+                destinées à contourner la loi. Contenu informatif uniquement - utilisation sous ta propre responsabilité.
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="year">2024</span> 420 Mechanics - L'Atelier du Grower Moderne. Tous droits réservés.</p>
+                <p>🔧 Conçu avec passion pour la communauté grower 🌱</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Modal pour détails techniques -->
+    <div id="techniqueModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modalContent">
+                <!-- Contenu dynamique -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Données des techniques pour les modals
+        const techniquesData = {
+            topping: {
+                title: "Topping - Couper pour Doubler",
+                content: `
+                    <h3>🎯 Objectif Principal</h3>
+                    <p>Éliminer la dominance apicale en coupant l'apex principal pour forcer la plante à développer 2 nouvelles têtes principales à partir des nœuds latéraux.</p>
+                    
+                    <h3>⏰ Timing Optimal</h3>
+                    <ul>
+                        <li><strong>Moment idéal :</strong> Quand la plante a 3-5 nœuds bien développés</li>
+                        <li><strong>Stade :</strong> Croissance végétative vigoureuse (jamais en stretch)</li>
+                        <li><strong>Éviter :</strong> Plants stressés, malades ou en fin de croissance</li>
+                    </ul>
+                    
+                    <h3>✅ Avantages</h3>
+                    <ul>
+                        <li>Canopée plus large et uniforme</li>
+                        <li>Meilleur contrôle de la hauteur</li>
+                        <li>Répartition optimale de l'énergie</li>
+                        <li>Technique prévisible et fiable</li>
+                    </ul>
+                    
+                    <h3>⚠️ Risques & Précautions</h3>
+                    <ul>
+                        <li>Stress temporaire (3-7 jours de ralentissement)</li>
+                        <li>Risque d'infection si outils non stérilisés</li>
+                        <li>Récupération plus lente sur plants affaiblis</li>
+                    </ul>
+                    
+                    <h3>🔧 Matériel Nécessaire</h3>
+                    <ul>
+                        <li>Ciseaux ou lame de rasoir stérilisés</li>
+                        <li>Alcool isopropylique 70%</li>
+                        <li>Optionnel : gel cicatrisant ou cannelle</li>
+                    </ul>
+                `
+            },
+            fim: {
+                title: "FIM - F*ck I Missed",
+                content: `
+                    <h3>🎯 Objectif Principal</h3>
+                    <p>Pincer/couper 75% de l'apex pour créer 4+ nouvelles têtes au lieu de 2 (topping classique).</p>
+                    
+                    <h3>⏰ Timing Optimal</h3>
+                    <ul>
+                        <li><strong>Moment idéal :</strong> Juste avant le stretch de préfloraison</li>
+                        <li><strong>Condition :</strong> Nouvelles feuilles bien visibles au sommet</li>
+                        <li><strong>Éviter :</strong> Apex trop mature ou trop jeune</li>
+                    </ul>
+                    
+                    <h3>✅ Avantages</h3>
+                    <ul>
+                        <li>Plus d'apex que le topping (4-8 vs 2)</li>
+                        <li>Stress moindre (apex partiellement préservé)</li>
+                        <li>Récupération souvent plus rapide</li>
+                        <li>Résultat unique et original</li>
+                    </ul>
+                    
+                    <h3>⚠️ Risques & Inconvénients</h3>
+                    <ul>
+                        <li>Résultat parfois imprévisible</li>
+                        <li>Technique moins fiable que le topping</li>
+                        <li>Demande plus de précision</li>
+                    </ul>
+                `
+            },
+            lst: {
+                title: "LST - Low Stress Training",
+                content: `
+                    <h3>🎯 Objectif Principal</h3>
+                    <p>Plier et attacher les branches pour créer une canopée horizontale et exposer tous les sites de floraison à la lumière.</p>
+                    
+                    <h3>⏰ Timing Optimal</h3>
+                    <ul>
+                        <li><strong>Début :</strong> Dès que les tiges sont flexibles (2-3 semaines)</li>
+                        <li><strong>Continuation :</strong> Tout au long de la croissance</li>
+                        <li><strong>Arrêt :</strong> 2e semaine de stretch maximum</li>
+                    </ul>
+                    
+                    <h3>✅ Avantages</h3>
+                    <ul>
+                        <li>Stress minimal pour la plante</li>
+                        <li>Technique progressive et réversible</li>
+                        <li>Compatible avec toutes les autres techniques</li>
+                        <li>Résultats visibles rapidement</li>
+                    </ul>
+                    
+                    <h3>🔧 Matériel Nécessaire</h3>
+                    <ul>
+                        <li>Ficelle souple ou fil de jardinage</li>
+                        <li>Petites ancres ou poids</li>
+                        <li>Élastiques ou clips souples</li>
+                    </ul>
+                `
+            },
+            scrog: {
+                title: "SCROG - Screen of Green",
+                content: `
+                    <h3>🎯 Objectif Principal</h3>
+                    <p>Maintenir une canopée parfaitement plane via un filet pour maximiser l'utilisation de la lumière et obtenir des têtes uniformes.</p>
+                    
+                    <h3>⏰ Timing Optimal</h3>
+                    <ul>
+                        <li><strong>Installation :</strong> Avant stretch, quand plants font 20-30cm</li>
+                        <li><strong>Tissage :</strong> En continu pendant stretch</li>
+                        <li><strong>Maintenance :</strong> Jusqu'à 2e semaine de floraison</li>
+                    </ul>
+                    
+                    <h3>✅ Avantages</h3>
+                    <ul>
+                        <li>Rendement maximum au m²</li>
+                        <li>Canopée parfaitement uniforme</li>
+                        <li>Pénétration lumineuse optimale</li>
+                        <li>Support naturel pour têtes lourdes</li>
+                    </ul>
+                    
+                    <h3>⚠️ Contraintes</h3>
+                    <ul>
+                        <li>Accès difficile aux plants</li>
+                        <li>Technique chronophage</li>
+                        <li>Demande surveillance constante</li>
+                        <li>Difficile à corriger si mal fait</li>
+                    </ul>
+                `
+            },
+            supercropping: {
+                title: "Supercropping - High Stress Training",
+                content: `
+                    <h3>🎯 Objectif Principal</h3>
+                    <p>Créer des micro-lésions contrôlées dans les tiges pour stimuler la production d'hormones de défense et renforcer la structure.</p>
+                    
+                    <h3>⏰ Timing Optimal</h3>
+                    <ul>
+                        <li><strong>Moment idéal :</strong> Stretch de préfloraison (semaine 1-2)</li>
+                        <li><strong>Condition :</strong> Tiges semi-rigides mais encore pliables</li>
+                        <li><strong>Éviter :</strong> Tiges trop jeunes (cassure) ou trop vieilles (lignifiées)</li>
+                    </ul>
+                    
+                    <h3>✅ Avantages</h3>
+                    <ul>
+                        <li>Renforcement considérable des tiges</li>
+                        <li>Augmentation potentielle de la production résine</li>
+                        <li>Contrôle de hauteur très efficace</li>
+                        <li>Stimulation générale du système racinaire</li>
+                    </ul>
+                    
+                    <h3>⚠️ Risques Majeurs</h3>
+                    <ul>
+                        <li>Cassure complète si mal exécuté</li>
+                        <li>Stress important (arrêt croissance 3-7 jours)</li>
+                        <li>Technique irréversible</li>
+                        <li>Demande expérience et feeling</li>
+                    </ul>
+                `
+            },
+            defoliation: {
+                title: "Defoliation - Gestion du Feuillage",
+                content: `
+                    <h3>🎯 Objectif Principal</h3>
+                    <p>Retirer sélectivement du feuillage pour améliorer la pénétration lumineuse, la circulation d'air et rediriger l'énergie vers les têtes.</p>
+                    
+                    <h3>⏰ Timing Optimal</h3>
+                    <ul>
+                        <li><strong>Session 1 :</strong> Milieu de croissance végétative</li>
+                        <li><strong>Session 2 :</strong> 1ère semaine de floraison</li>
+                        <li><strong>Session 3 :</strong> 3e semaine de floraison (légère)</li>
+                        <li><strong>Éviter :</strong> Fin de floraison ou plants stressés</li>
+                    </ul>
+                    
+                    <h3>✅ Avantages</h3>
+                    <ul>
+                        <li>Meilleure pénétration lumineuse</li>
+                        <li>Circulation d'air améliorée</li>
+                        <li>Focus énergie sur têtes principales</li>
+                        <li>Réduction risques moisissures</li>
+                    </ul>
+                    
+                    <h3>⚠️ Controverses & Risques</h3>
+                    <ul>
+                        <li>Technique débattue dans la communauté</li>
+                        <li>Stress important si trop agressive</li>
+                        <li>Ralentissement possible de la croissance</li>
+                        <li>Demande connaissance précise du plant</li>
+                    </ul>
+                    
+                    <h3>🔧 Règles d'Or</h3>
+                    <ul>
+                        <li>Maximum 20% du feuillage par session</li>
+                        <li>Privilégier grandes feuilles anciennes</li>
+                        <li>Garder feuilles nourricières près des têtes</li>
+                        <li>Outils stérilisés obligatoire</li>
+                    </ul>
+                `
+            }
+        };
+
+        // Gestion du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton = document.querySelector('.submit-button');
+            const buttonText = document.querySelector('.button-text');
+            const buttonLoader = document.querySelector('.button-loader');
+            
+            // Animation loading
+            submitButton.disabled = true;
+            buttonText.style.display = 'none';
+            buttonLoader.style.display = 'inline';
+            
+            // Simulation envoi (remplace par vraie logique d'envoi)
+            setTimeout(() => {
+                // Reset formulaire
+                document.getElementById('contactForm').reset();
+                
+                // Reset bouton
+                submitButton.disabled = false;
+                buttonText.style.display = 'inline';
+                buttonLoader.style.display = 'none';
+                
+                // Afficher confirmation
+                showConfirmation();
+                
+                // Analytics/tracking (optionnel)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'contact',
+                        'event_label': 'contact_form'
+                    });
+                }
+            }, 2000);
+        });
+        
+        function showConfirmation() {
+            document.getElementById('confirmationMessage').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function hideConfirmation() {
+            document.getElementById('confirmationMessage').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Fermeture confirmation en cliquant à l'extérieur
+        document.getElementById('confirmationMessage').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideConfirmation();
+            }
+        });
+        
+        // Validation en temps réel
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const inputs = form.querySelectorAll('input[required], textarea[required]');
+            
+            inputs.forEach(input => {
+                input.addEventListener('blur', validateField);
+                input.addEventListener('input', clearValidation);
+            });
+            
+            function validateField(e) {
+                const field = e.target;
+                const value = field.value.trim();
+                
+                // Remove existing error styling
+                field.classList.remove('error');
+                
+                if (!value) {
+                    field.classList.add('error');
+                    return false;
+                }
+                
+                // Email validation
+                if (field.type === 'email') {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        field.classList.add('error');
+                        return false;
+                    }
+                }
+                
+                return true;
+            }
+            
+            function clearValidation(e) {
+                e.target.classList.remove('error');
+            }
+        });
+        
+        // Auto-resize textarea
+        document.getElementById('message').addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+        
+        // Copie email au clic
+        document.querySelector('.contact-email').addEventListener('click', function() {
+            const email = this.textContent;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email).then(() => {
+                    // Feedback visuel
+                    const originalText = this.textContent;
+                    this.textContent = '📋 Email copié !';
+                    this.style.color = var(--vert-signature);
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.color = var(--cuivre-mecanique);
+                    }, 2000);
+                });
+            }
+        });
+
+        // Gestion du scroll
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Gestion des modals techniques
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event listeners pour les liens techniques
+            document.querySelectorAll('[data-technique]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const technique = this.getAttribute('data-technique');
+                    openModal(technique);
+                });
+            });
+
+            // Fermeture modal en cliquant à l'extérieur
+            document.getElementById('techniqueModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+
+            // Smooth scroll pour navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Mise à jour de l'année
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+
+        function openModal(technique) {
+            const modal = document.getElementById('techniqueModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            if (techniquesData[technique]) {
+                modalContent.innerHTML = `
+                    <h2>${techniquesData[technique].title}</h2>
+                    ${techniquesData[technique].content}
+                `;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('techniqueModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fonction d'impression du planning
+        function printPlanning() {
+            const printContent = `
+                <h1>420 Mechanics - Planning de Culture</h1>
+                <h2>Check-List Semaine par Semaine</h2>
+                
+                <h3>Semaines 1-2 : Germination & Plantule</h3>
+                <ul>
+                    <li>□ Surveillance humidité substrat</li>
+                    <li>□ Lumière douce (CFL ou LED basse intensité)</li>
+                    <li>□ Température stable 22-25°C</li>
+                    <li>□ Pas d'intervention apex (trop fragile)</li>
+                </ul>
+                
+                <h3>Semaines 3-4 : Croissance Juvénile</h3>
+                <ul>
+                    <li>□ Premier LST possible si tiges flexibles</li>
+                    <li>□ Observation développement nœuds</li>
+                    <li>□ Ajustement distance lumière</li>
+                    <li>□ Première fertilisation légère</li>
+                </ul>
+                
+                <h3>Semaines 5-6 : Croissance Vigoureuse</h3>
+                <ul>
+                    <li>□ Moment optimal TOPPING (3-5 nœuds)</li>
+                    <li>□ FIM alternatif au topping</li>
+                    <li>□ Installation SCROG si prévu</li>
+                    <li>□ Première defoliation légère si nécessaire</li>
+                </ul>
+                
+                <h3>Semaines 7-8 : Préparation Floraison</h3>
+                <ul>
+                    <li>□ Dernier LST avant stretch</li>
+                    <li>□ SUPERCROPPING sur branches fortes</li>
+                    <li>□ Passage 12/12 si photopériodique</li>
+                    <li>□ Augmentation P-K dans nutrition</li>
+                </ul>
+                
+                <h3>Semaines 9-10 : Stretch Floraison</h3>
+                <ul>
+                    <li>□ Maintien SCROG - tisser nouvelles pousses</li>
+                    <li>□ Surveillance stretch (peut doubler de taille)</li>
+                    <li>□ Defoliation modérée si canopée dense</li>
+                    <li>□ Identification préfleurs mâles/femelles</li>
+                </ul>
+                
+                <h3>Semaines 11+ : Floraison Mature</h3>
+                <ul>
+                    <li>□ STOP toute technique apex stressante</li>
+                    <li>□ Focus support têtes lourdes</li>
+                    <li>□ Defoliation sélective grandes feuilles</li>
+                    <li>□ Surveillance trichomes pour récolte</li>
+                </ul>
+            `;
+            
+            const printWindow = window.open('', '', 'height=600,width=800');
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>420 Mechanics - Planning Culture</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; padding: 20px; }
+                        h1 { color: #2FA874; }
+                        h2 { color: #B85C00; }
+                        h3 { color: #0F1724; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+                        ul { margin-bottom: 20px; }
+                        li { margin-bottom: 8px; }
+                    </style>
+                </head>
+                <body>
+                    ${printContent}
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Animation d'apparition des cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
+                    entry.target.style.animation = 'slideInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observer les cards une fois le DOM chargé
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                observer.observe(card);
+            });
+        });
+
+        // Animation CSS keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>="week-title">Semaines 1-2 : Germination & Plantule</h4>
+                            <ul class="week-tasks">
+                                <li>Surveillance humidité substrat</li>
+                                <li>Lumière douce (CFL ou LED basse intensité)</li>
+                                <li>Température stable 22-25°C</li>
+                                <li>Pas d'intervention apex (trop fragile)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4 class="week-title">Semaines 3-4 : Croissance Juvénile</h4>
+                            <ul class="week-tasks">
+                                <li>🔧 Premier LST possible si tiges flexibles</li>
+                                <li>Observation développement nœuds</li>
+                                <li>Ajustement distance lumière</li>
+                                <li>Première fertilisation légère</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4 class="week-title">Semaines 5-6 : Croissance Vigoureuse</h4>
+                            <ul class="week-tasks">
+                                <li>🔧 Moment optimal TOPPING (3-5 nœuds)</li>
+                                <li>🔧 FIM alternatif au topping</li>
+                                <li>Installation SCROG si prévu</li>
+                                <li>Première defoliation légère si nécessaire</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4 class
